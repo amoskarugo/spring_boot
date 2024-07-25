@@ -65,4 +65,10 @@ public class AuthorDaoImplTest {
         verify(jdbcTemplate).update("UPDATE authors SET id = ?, name = ?, age = ? WHERE id = ?",
                 1L, "amos", 80, 1L);
     }
+
+    @Test
+    public void testThatDeleteGeneratesCorrectSql(){
+        underTest.delete(1L);
+        verify(jdbcTemplate).update("DELETE FROM authors WHERE id = ?", 1L);
+    }
 }
