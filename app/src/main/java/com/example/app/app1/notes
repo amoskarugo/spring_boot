@@ -1,0 +1,13 @@
+DEPENDENCY INJECTION/ AUTO WIRING
+BEANS -
+COMPONENT SCANNING - A process that runs when the boot application is started, looks for beans and provide them where they are needed.
+- place all beans in the spring application context.
+- Pool of beans and can be provided whenever they are needed.
+- If the application lacks the beans it needs it fails to start up.
+
+
+
+@SPRINGBOOTAPPLICATION
+    @CONFIGURATION - Identifies a configuration class, where spring should look for beans during it configuration phase.
+    @ComponentScan - Says from the point of project hierarchy and down look for beans and provide them where they are needed.
+    @EnableAutoConfiguration - A process that spring boot uses when it starts up, provide all dependencies and defaults.
