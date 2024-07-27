@@ -1,5 +1,7 @@
 package com.example.springDataJpa;
 
+import com.example.springDataJpa.domain.dto.AuthorDto;
+import com.example.springDataJpa.domain.dto.BookDto;
 import com.example.springDataJpa.domain.entities.AuthorEntity;
 import com.example.springDataJpa.domain.entities.BookEntity;
 
@@ -33,6 +35,13 @@ public final class TestDataUtil {
                 .title("The mountain")
                 .authorEntity(authorEntity).build();
     }
+    public static BookDto createTestBookDtoA(final AuthorDto authorDto) {
+        return BookDto.builder()
+                .isbn("axw")
+                .title("The mountain")
+                .author(authorDto).build();
+    }
+
 
     public static BookEntity createTestBookB(final AuthorEntity authorEntity) {
         return BookEntity.builder()
