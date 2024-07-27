@@ -1,4 +1,4 @@
-package com.example.springDataJpa.domain;
+package com.example.springDataJpa.domain.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -13,15 +13,14 @@ import org.springframework.context.annotation.Configuration;
 @Builder
 @Data
 @Entity
-@Table(name = "authors")
-public class Author {
+@Table(name = "books")
+public class BookEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "author_id_seq")
-    private Long id;
+    private String isbn;
 
-    private String name;
+    private String title;
 
-    private Integer age;
-
-
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "author_id")
+    private AuthorEntity authorEntity;
 }

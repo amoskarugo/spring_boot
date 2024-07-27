@@ -1,49 +1,49 @@
 package com.example.springDataJpa;
 
-import com.example.springDataJpa.domain.Author;
-import com.example.springDataJpa.domain.Book;
+import com.example.springDataJpa.domain.entities.AuthorEntity;
+import com.example.springDataJpa.domain.entities.BookEntity;
 
 public final class TestDataUtil {
     private TestDataUtil(){}
 
 
-    public static Author createTestAuthorA() {
-        return Author.builder()
+    public static AuthorEntity createTestAuthorA() {
+        return AuthorEntity.builder()
                 .id(1L)
                 .age(80)
                 .name("amos").build();
     }
 
-    public static Author createTestAuthorB() {
-        return Author.builder()
+    public static AuthorEntity createTestAuthorB() {
+        return AuthorEntity.builder()
                 .id(2L)
                 .age(46)
                 .name("william").build();
     }
-    public static Author createTestAuthorC() {
-        return Author.builder()
+    public static AuthorEntity createTestAuthorC() {
+        return AuthorEntity.builder()
                 .id(3L)
                 .age(24)
                 .name("lynne").build();
     }
 
-    public static Book createTestBookA(final Author author) {
-        return Book.builder()
+    public static BookEntity createTestBookA(final AuthorEntity authorEntity) {
+        return BookEntity.builder()
                 .isbn("axw")
                 .title("The mountain")
-                .author(author).build();
+                .authorEntity(authorEntity).build();
     }
 
-    public static Book createTestBookB(final Author author) {
-        return Book.builder()
+    public static BookEntity createTestBookB(final AuthorEntity authorEntity) {
+        return BookEntity.builder()
                 .isbn("abcd")
                 .title("The river between")
-                .author(author).build();
+                .authorEntity(authorEntity).build();
     }
-    public static Book createTestBookC(final Author author) {
-        return Book.builder()
+    public static BookEntity createTestBookC(final AuthorEntity authorEntity) {
+        return BookEntity.builder()
                 .isbn("abcdef")
                 .title("The greedy hyena")
-                .author(author).build();
+                .authorEntity(authorEntity).build();
     }
 }
