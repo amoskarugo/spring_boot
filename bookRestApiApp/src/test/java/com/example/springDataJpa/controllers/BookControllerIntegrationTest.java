@@ -80,7 +80,7 @@ public class BookControllerIntegrationTest {
     }
 
     @Test
-    public void testThatListAuthorSuccessfullyReturnsListOfAuthors() throws Exception {
+    public void testThatListBookSuccessfullyReturnsListOfBooks() throws Exception {
         BookEntity book = TestDataUtil.createTestBookA(null);
 
         bookService.createBook(book.getIsbn(), book);
