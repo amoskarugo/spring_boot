@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ff8061c4-b147-47de-b077-f64576924508" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2jkIkckgvWzf1Ulm75zJm1DmZe3" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.BooksApiApplication.executor": "Run",
+    "Application.SpringDataJpaApplication.executor": "Run",
+    "JUnit.AuthorControllerIntegrationTests.testThatCreateAuthorSuccessfullyReturnsCreatedAuthor.executor": "Run",
+    "JUnit.AuthorControllerIntegrationTests.testThatCreateAuthorSuccessfullyReturnsHttp201Created.executor": "Run",
+    "JUnit.AuthorControllerIntegrationTests.testThatGetAuthorSuccessfullyReturnsAuthorWhenAuthorExists.executor": "Run",
+    "JUnit.AuthorControllerIntegrationTests.testThatGetAuthorSuccessfullyReturnsHttpStatus200WhenAuthorExists.executor": "Run",
+    "JUnit.AuthorControllerIntegrationTests.testThatGetAuthorSuccessfullyReturnsHttpStatus404WhenNoAuthorExists.executor": "Run",
+    "JUnit.AuthorControllerIntegrationTests.testThatListAuthorSuccessfullyReturnsHttpStatus200.executor": "Run",
+    "JUnit.AuthorControllerIntegrationTests.testThatListAuthorSuccessfullyReturnsListOfAuthors.executor": "Run",
+    "JUnit.AuthorRepoIntegrationTest.testThatAuthorCanBeCreatedAndRecalled.executor": "Run",
+    "JUnit.AuthorRepoIntegrationTest.testThatAuthorCanBeDeleted.executor": "Run",
+    "JUnit.AuthorRepoIntegrationTest.testThatAuthorCanBeUpdated.executor": "Run",
+    "JUnit.AuthorRepoIntegrationTest.testThatGetAuthorsWithAgeLessThan.executor": "Run",
+    "JUnit.AuthorRepoIntegrationTest.testThatMultipleAuthorsCanBeCreatedAndRecalled.executor": "Run",
+    "JUnit.BookControllerIntegrationTest.testThatCreateBookSuccessfullyReturnsCreatedBook.executor": "Run",
+    "JUnit.BookControllerIntegrationTest.testThatCreateBookSuccessfullyReturnsHttp201Created.executor": "Run",
+    "JUnit.BookControllerIntegrationTest.testThatGetBookSuccessfullyReturnsHttpStatus200WhenBookExists.executor": "Run",
+    "JUnit.BookControllerIntegrationTest.testThatListAuthorSuccessfullyReturnsListOfAuthors.executor": "Run",
+    "JUnit.BookControllerIntegrationTest.testThatListBookSuccessfullyReturnsHttpStatus200Ok.executor": "Run",
+    "JUnit.BookRepoIntegrationTest.testThatBookCanBeCreatedAndRecalled.executor": "Run",
+    "JUnit.BookRepoIntegrationTest.testThatBookCanBeDeleted.executor": "Run",
+    "JUnit.BookRepoIntegrationTest.testThatBookCanBeUpdated.executor": "Run",
+    "JUnit.BookRepoIntegrationTest.testThatMultipleBooksCanBeCreatedAndRecalled.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/amoh/backend/spring_boot/bookRestApiApp"
+  }
+}]]></component>
+  <component name="RunManager" selected="JUnit.BookControllerIntegrationTest.testThatGetBookSuccessfullyReturnsHttpStatus200WhenBookExists">
+    <configuration name="BooksApiApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.springDataJpa.BooksApiApplication" />
+      <module name="springDataJpa" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.springDataJpa.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AuthorControllerIntegrationTests.testThatGetAuthorSuccessfullyReturnsAuthorWhenAuthorExists" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springDataJpa" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.springDataJpa.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.springDataJpa.controllers" />
+      <option name="MAIN_CLASS_NAME" value="com.example.springDataJpa.controllers.AuthorControllerIntegrationTests" />
+      <option name="METHOD_NAME" value="testThatGetAuthorSuccessfullyReturnsAuthorWhenAuthorExists" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AuthorControllerIntegrationTests.testThatGetAuthorSuccessfullyReturnsHttpStatus200WhenAuthorExists" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springDataJpa" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.springDataJpa.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.springDataJpa.controllers" />
+      <option name="MAIN_CLASS_NAME" value="com.example.springDataJpa.controllers.AuthorControllerIntegrationTests" />
+      <option name="METHOD_NAME" value="testThatGetAuthorSuccessfullyReturnsHttpStatus200WhenAuthorExists" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AuthorControllerIntegrationTests.testThatGetAuthorSuccessfullyReturnsHttpStatus404WhenNoAuthorExists" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springDataJpa" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.springDataJpa.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.springDataJpa.controllers" />
+      <option name="MAIN_CLASS_NAME" value="com.example.springDataJpa.controllers.AuthorControllerIntegrationTests" />
+      <option name="METHOD_NAME" value="testThatGetAuthorSuccessfullyReturnsHttpStatus404WhenNoAuthorExists" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BookControllerIntegrationTest.testThatGetBookSuccessfullyReturnsHttpStatus200WhenBookExists" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springDataJpa" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.springDataJpa.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.springDataJpa.controllers" />
+      <option name="MAIN_CLASS_NAME" value="com.example.springDataJpa.controllers.BookControllerIntegrationTest" />
+      <option name="METHOD_NAME" value="testThatGetBookSuccessfullyReturnsHttpStatus200WhenBookExists" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.BookControllerIntegrationTest.testThatGetBookSuccessfullyReturnsHttpStatus200WhenBookExists" />
+        <item itemvalue="Application.BooksApiApplication" />
+        <item itemvalue="JUnit.AuthorControllerIntegrationTests.testThatGetAuthorSuccessfullyReturnsAuthorWhenAuthorExists" />
+        <item itemvalue="JUnit.AuthorControllerIntegrationTests.testThatGetAuthorSuccessfullyReturnsHttpStatus404WhenNoAuthorExists" />
+        <item itemvalue="JUnit.AuthorControllerIntegrationTests.testThatGetAuthorSuccessfullyReturnsHttpStatus200WhenAuthorExists" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-17.0.10-corretto-17.0.10-f644763e9732-f00315f9" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ff8061c4-b147-47de-b077-f64576924508" name="Changes" comment="" />
+      <created>1721924792307</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1721924792307</updated>
+    </task>
+    <servers />
+  </component>
+</project>

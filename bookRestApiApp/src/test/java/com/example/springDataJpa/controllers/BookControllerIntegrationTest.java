@@ -3,10 +3,8 @@ package com.example.springDataJpa.controllers;
 
 import com.example.springDataJpa.TestDataUtil;
 import com.example.springDataJpa.domain.dto.BookDto;
-import com.example.springDataJpa.domain.entities.AuthorEntity;
 import com.example.springDataJpa.domain.entities.BookEntity;
 import com.example.springDataJpa.services.BookService;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -83,7 +81,7 @@ public class BookControllerIntegrationTest {
     public void testThatListBookSuccessfullyReturnsListOfBooks() throws Exception {
         BookEntity book = TestDataUtil.createTestBookA(null);
 
-        bookService.createBook(book.getIsbn(), book);
+        bookService.createUpdateBook(book.getIsbn(), book);
         mockMvc.perform(MockMvcRequestBuilders.get("/books")
                 .contentType(MediaType.APPLICATION_JSON)
         ).andExpect(
@@ -99,12 +97,79 @@ public class BookControllerIntegrationTest {
 
         BookEntity book = TestDataUtil.createTestBookA(null);
 
-        bookService.createBook(book.getIsbn(), book);
+        bookService.createUpdateBook(book.getIsbn(), book);
 
         mockMvc.perform(MockMvcRequestBuilders.get("/books/" + book.getIsbn())
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(
                         MockMvcResultMatchers.status().isOk()
+                );
+    }
+
+    @Test
+    public void testThatPartialUpdateExistingBookReturnsHttpStatus200() throws Exception {
+
+        BookEntity book = TestDataUtil.createTestBookA(null);
+
+        bookService.createUpdateBook(book.getIsbn(), book);
+
+        BookDto bookDto = TestDataUtil.createTestBookDtoA(null);
+        bookDto.setTitle("UPDATED");
+
+        String bookDtoJson = objectMapper.writeValueAsString(bookDto);
+
+        mockMvc.perform(MockMvcRequestBuilders.patch("/books/" + book.getIsbn())
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(bookDtoJson))
+                .andExpect(
+                        MockMvcResultMatchers.status().isOk()
+                );
+
+    }
+
+    @Test
+    public void testThatPartialUpdateExistingBookReturnsUpdatedBook() throws Exception {
+
+        BookEntity book = TestDataUtil.createTestBookA(null);
+
+        bookService.createUpdateBook(book.getIsbn(), book);
+
+        BookDto bookDto = TestDataUtil.createTestBookDtoA(null);
+        bookDto.setTitle("UPDATED");
+
+        String bookDtoJson = objectMapper.writeValueAsString(bookDto);
+
+        mockMvc.perform(MockMvcRequestBuilders.patch("/books/" + book.getIsbn())
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(bookDtoJson))
+                .andExpect(
+                        MockMvcResultMatchers.jsonPath("$.isbn").value(book.getIsbn())
+                ).andExpect(
+                        MockMvcResultMatchers.jsonPath("$.title").value("UPDATED")
+                );
+    }
+
+    @Test
+    public void testThatDeleteNonExistingBookReturnsHttpStatus204NoContent() throws Exception {
+        mockMvc.perform(MockMvcRequestBuilders.delete("/books/99")
+                        .contentType(MediaType.APPLICATION_JSON)
+                )
+                .andExpect(
+                        MockMvcResultMatchers.status().isNoContent()
+                );
+    }
+
+
+    @Test
+    public void testThatDeleteBookReturnsHttpStatus204ForExistingAuthor() throws Exception {
+        BookEntity bookEntity = TestDataUtil.createTestBookA(null);
+        BookEntity saveBookEntity = bookService.createUpdateBook(bookEntity.getIsbn(), bookEntity);
+
+        mockMvc.perform(MockMvcRequestBuilders.delete("/books/" + saveBookEntity.getIsbn())
+                        .contentType(MediaType.APPLICATION_JSON)
+                )
+                .andExpect(
+                        MockMvcResultMatchers.status().isNoContent()
                 );
     }
 }
